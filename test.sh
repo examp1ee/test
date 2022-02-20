@@ -54,15 +54,15 @@ kv=100
 var=\$(echo "scale=0; \$averagetmp*\$kv" | bc)
 var1=\${var%%.*}
 if [ \$var1 -lt "20" ];then
-echo \`/bin/date +"%b %d %H:%M"\` "(rollsup) Загрузка машины \$var1% Нода скорее всего в подвисшем состоянии rolls покупаться не будет" >> /root/rolls.log
+echo \`/bin/date +"%b %d %H:%M"\` "(rollsup) Завантаження машини \$var1% Швидше за все нода зависла, rolls купуватися не буде" >> /root/rolls.log
 elif [ -z "\$candidat" ];then
-echo \`/bin/date +"%b %d %H:%M"\` "Нода в данный момент не в сети" >> /root/rolls.log
+echo \`/bin/date +"%b %d %H:%M"\` "Зараз нода не в мережі" >> /root/rolls.log
 elif [ \$candidat -gt "0" ];then
 echo "Ok" > /dev/null
 elif [ \$final_balans -gt "99" ]; then
-echo \`/bin/date +"%b %d %H:%M"\` "Ролл слетел, проверяем количество монеток и пробуем купить" >> /root/rolls.log
+echo \`/bin/date +"%b %d %H:%M"\` "Ролл злетів, перевіряємо кількість монеток і пробуємо купити" >> /root/rolls.log
 else
-echo \`/bin/date +"%b %d %H:%M"\` "Недостаточно монет для покупки ролла у вас \$final_balans, необходимо минимум 100" >> /root/rolls.log
+echo \`/bin/date +"%b %d %H:%M"\` "Недостатньо монет для покупки ролла, у вас \$final_balans, необхідно мінімум 100" >> /root/rolls.log
 fi
 EOF
 
