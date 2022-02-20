@@ -17,24 +17,5 @@ while test $# -gt 0; do
 		echo -e "  -u, --update     update the node"
 		echo
 		echo
-		return 0 2>/dev/null; exit 0
-		;;
-	-n*|--node*)
-		if ! grep -q "=" <<< $1; then shift; fi
-		node=`option_value $1`
-		shift
-		;;
-	-r*|--rpc*)
-		if ! grep -q "=" <<< $1; then shift; fi
-		rpc=`option_value $1`
-		shift
-		;;
-	-u|--update)
-		function="update"
-		shift
-		;;
-	*|--)
-		break
-		;;
 	esac
 done
