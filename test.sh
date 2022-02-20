@@ -1,5 +1,5 @@
 # Options
-. <(wget -qO- https://raw.githubusercontent.com/Kallen-c/utils/main/colors.sh) --
+#. <(wget -qO- https://raw.githubusercontent.com/Kallen-c/utils/main/colors.sh) --
 option_value(){ echo "$1" | sed -e 's%^--[^=]*=%%g; s%^-[^=]*=%%g'; }
 while test $# -gt 0; do
 	case "$1" in
