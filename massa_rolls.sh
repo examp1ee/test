@@ -36,6 +36,15 @@ if [ ! -e $HOME/massa/massa-client/massa-client ]; then
 fi
 
 sudo systemctl restart massad
+echo -e "\033[35m"
+echo "Restarting massad"
+for((sec=0; sec<5; sec++))
+        do
+                printf "."
+                sleep 1
+        done
+echo -e "\033[0m"
+
 
 cd $HOME/massa/massa-client
 massa_wallet_address=$(./massa-client wallet_info | grep Address | awk '{ print $2 }')
