@@ -39,3 +39,5 @@ echo -e "\033[0m"
 cd $HOME/massa/massa-client
 massa_wallet_address=$(./massa-client wallet_info | grep Address | awk '{ print $2 }')
 echo $massa_wallet_address;
+balance=$(./massa-client wallet_info | grep "Final balance" | awk '{ print $3 }')
+echo $balance;
