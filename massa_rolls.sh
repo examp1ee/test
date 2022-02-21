@@ -61,6 +61,6 @@ do
         printf "\n"
 done
 
-echo -e "\033[35m"
-echo -e "Script was installed successfully"
-echo -e "\033[0m"
+#echo -e "\033[35m"
+#echo -e "Script was installed successfully"
+#echo -e "\033[0m"
