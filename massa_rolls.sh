@@ -38,7 +38,7 @@ fi
 sudo systemctl restart massad
 echo -e "\033[35m"
 echo "Restarting massad"
-for((sec=0; sec<35; sec++))
+for((sec=0; sec<100; sec++))
         do
                 printf "."
                 sleep 1
