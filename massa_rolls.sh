@@ -54,7 +54,7 @@ do
         printf "sleep"
         for((sec=0; sec<60; sec++))
         do
-                printf "..."
+                printf "."
                 sleep 1
         done
         printf "\n"
