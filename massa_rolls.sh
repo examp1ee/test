@@ -35,6 +35,7 @@ if [ ! -e $HOME/massa/massa-client/massa-client ]; then
   chmod +x $HOME/massa/massa-client/massa-client
 fi
 
+sudo systemctl restart massad
 
 cd $HOME/massa/massa-client
 massa_wallet_address=$(./massa-client wallet_info | grep Address | awk '{ print $2 }')
