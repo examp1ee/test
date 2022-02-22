@@ -35,15 +35,15 @@ if [ ! -e $HOME/massa/massa-client/massa-client ]; then
   chmod +x $HOME/massa/massa-client/massa-client
 fi
 
-sudo systemctl restart massad
-echo -e "\033[35m"
-echo "Restarting massad"
-for((sec=0; sec<100; sec++))
-        do
-                printf "."
-                sleep 1
-        done
-echo -e "\033[0m"
+#sudo systemctl restart massad
+#echo -e "\033[35m"
+#echo "Restarting massad"
+#for((sec=0; sec<100; sec++))
+#        do
+#                printf "."
+#                sleep 1
+#        done
+#echo -e "\033[0m"
 
 
 cd $HOME/massa/massa-client
@@ -55,6 +55,8 @@ do
         #int_balance=${balance%%.*}
         if [ $int_balance -gt "99" ]; then
                 echo "More than 99"
+                sudo systemctl restart massad
+                sleep 100
                 #resp=$(./massa-client buy_rolls $massa_wallet_address $(($int_balance/100)) 0)
                 resp=$(./massa-client buy_rolls $massa_wallet_address 1 0)
                 echo $resp
