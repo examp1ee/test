@@ -57,9 +57,9 @@ do
                 echo "More than 99"
                 #resp=$(./massa-client buy_rolls $massa_wallet_address $(($int_balance/100)) 0)
                 resp=$(./massa-client buy_rolls $massa_wallet_address 1 0)
-                echo "massa_client"
+                echo massa_client
                 echo $resp
-                echo "exit"
+                echo exit
         elif [ $int_balance -lt "100" ]; then
                 echo "Less than 100"
         fi
